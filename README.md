@@ -30,4 +30,4 @@ STATICFILES = [
 ```
 
 Configuration format like this `(path: str, name: str, options: dict)`
-The options here will be passed to `starlette.staticfiles.StaticFiles`.
+The `options` here will be passed to `starlette.staticfiles.StaticFiles`.
