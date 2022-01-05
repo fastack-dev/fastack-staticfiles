@@ -21,12 +21,11 @@ Plugin configuration example
 
 ```py
 STATICFILES = [
-    ("/static", "static", {
-        "directory": "assets",
-        "packages": [],
-        "html": False,
-        "check_dir": True
-    })
+    (
+        "/static",
+        "static",
+        {"directory": "assets", "packages": [], "html": False, "check_dir": True},
+    )
 ]
 ```
 
