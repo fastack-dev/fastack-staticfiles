@@ -1,6 +1,8 @@
 from typing import List, Tuple
+
 from fastack import Fastack
 from fastapi.staticfiles import StaticFiles
+
 
 def setup(app: Fastack):
     staticfiles: List[Tuple] = app.get_setting("STATICFILES", [])
@@ -11,4 +13,6 @@ def setup(app: Fastack):
 
     except ValueError as e:
         if "not enough values to unpack" in e.args[0]:
-            raise RuntimeError("Make sure your static file configuration is correct like this [(path, name, {options: value})]")
+            raise RuntimeError(
+                "Make sure your static file configuration is correct like this [(path, name, {options: value})]"
+            )
